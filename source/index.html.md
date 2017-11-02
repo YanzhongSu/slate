@@ -25,7 +25,7 @@ Copofi uses API keys to allow access to the API endpoints. You will be given an 
 `Return calculated long-term and short-term let gross of a given property.`
 
 
-> This endpoint returns a JSON structured object like this:
+> This endpoint returns a JSON structured object. :
 
 ```json
 {
@@ -102,7 +102,44 @@ Note: parameters marked with * denotes those that are required.
 # Postcode
 This endpoint retrieves all the available postcodes.
 
-<!-- > The This endpoint returns JSON structured like this:
+> This endpoint returns a JSON structured object. :
+
+```json
+{
+  "ppt_value": 340000,
+  "user_data": {
+    "income_tax_sht": 6460,
+    "ltv": 0.7,
+    "total_income_lng": {
+      "2017": 5406,
+      "2018": 4989.5,
+      "2019": 4573,
+      "2020": 4156.5,
+      "2021": 3740
+    },
+    "income_tax_lng": 6936,
+    "income_tax_rlf": {
+      "2017": 3332,
+      "2018": 2915.5,
+      "2019": 2499,
+      "2020": 2082.5,
+      "2021": 1666
+    },
+    "net_rev_sht": 24480,
+    "shtVslng": 0,
+    "net_rev_lng": 17340,
+    "total_income_sht": {
+      "2017": 9690,
+      "2018": 9690,
+      "2019": 9690,
+      "2020": 9690,
+      "2021": 9690
+    }
+  },
+  "interest_cost": 8330
+}
+```
+> The This endpoint returns JSON structured like this:
 
 ```json
 {
@@ -114,7 +151,7 @@ This endpoint retrieves all the available postcodes.
       ...
     ]
 }```
- -->
+
 
 ### URL
 
@@ -129,12 +166,6 @@ This endpoint retrieves all the available postcodes.
 
 `None`
 
-
-This endpoint deletes a specific kitten.
-
-### HTTP Request
-
-`DELETE http://example.com/kittens/<ID>`
 
 ### URL Parameters
 
