@@ -117,7 +117,7 @@ This endpoint retrieves all the available postcodes.
 
 `None`
 
-> The This endpoint returns JSON structured like this:
+> This endpoint returns JSON structured like this:
 
 ```json
 {
