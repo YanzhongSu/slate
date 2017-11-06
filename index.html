@@ -233,10 +233,30 @@
                   <li>
                     <a href="#query-parameters" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
                   </li>
+                  <li>
+                    <a href="#this-endpoint-returns-a-json-structured-object" class="toc-h2 toc-link" data-title="This endpoint returns a JSON structured object. :">This endpoint returns a JSON structured object. :</a>
+                  </li>
               </ul>
           </li>
           <li>
             <a href="#postcode" class="toc-h1 toc-link" data-title="Postcode">Postcode</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#url-2" class="toc-h2 toc-link" data-title="URL">URL</a>
+                  </li>
+                  <li>
+                    <a href="#method-2" class="toc-h2 toc-link" data-title="Method">Method</a>
+                  </li>
+                  <li>
+                    <a href="#query-parameters-2" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
+                  </li>
+                  <li>
+                    <a href="#url-parameters" class="toc-h2 toc-link" data-title="URL Parameters">URL Parameters</a>
+                  </li>
+                  <li>
+                    <a href="#the-this-endpoint-returns-json-structured-like-this" class="toc-h2 toc-link" data-title="The This endpoint returns JSON structured like this:">The This endpoint returns JSON structured like this:</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
@@ -256,44 +276,7 @@
 <p>Copofi uses API keys to allow access to the API endpoints. You will be given an API key upon request.</p>
 <h1 id='fhl-calculato'>FHL Calculato</h1>
 <p><code>Return calculated long-term and short-term let gross of a given property.</code></p>
-
-<blockquote>
-<p>This endpoint returns a JSON structured object. :</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"ppt_value"</span><span class="p">:</span><span class="w"> </span><span class="mi">340000</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"user_data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"income_tax_sht"</span><span class="p">:</span><span class="w"> </span><span class="mi">6460</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"ltv"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.7</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"total_income_lng"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"2017"</span><span class="p">:</span><span class="w"> </span><span class="mi">5406</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2018"</span><span class="p">:</span><span class="w"> </span><span class="mf">4989.5</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2019"</span><span class="p">:</span><span class="w"> </span><span class="mi">4573</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2020"</span><span class="p">:</span><span class="w"> </span><span class="mf">4156.5</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2021"</span><span class="p">:</span><span class="w"> </span><span class="mi">3740</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"income_tax_lng"</span><span class="p">:</span><span class="w"> </span><span class="mi">6936</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"income_tax_rlf"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"2017"</span><span class="p">:</span><span class="w"> </span><span class="mi">3332</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2018"</span><span class="p">:</span><span class="w"> </span><span class="mf">2915.5</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2019"</span><span class="p">:</span><span class="w"> </span><span class="mi">2499</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2020"</span><span class="p">:</span><span class="w"> </span><span class="mf">2082.5</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2021"</span><span class="p">:</span><span class="w"> </span><span class="mi">1666</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"net_rev_sht"</span><span class="p">:</span><span class="w"> </span><span class="mi">24480</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"shtVslng"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"net_rev_lng"</span><span class="p">:</span><span class="w"> </span><span class="mi">17340</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"total_income_sht"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"2017"</span><span class="p">:</span><span class="w"> </span><span class="mi">9690</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2018"</span><span class="p">:</span><span class="w"> </span><span class="mi">9690</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2019"</span><span class="p">:</span><span class="w"> </span><span class="mi">9690</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2020"</span><span class="p">:</span><span class="w"> </span><span class="mi">9690</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2021"</span><span class="p">:</span><span class="w"> </span><span class="mi">9690</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"interest_cost"</span><span class="p">:</span><span class="w"> </span><span class="mi">8330</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='url'>URL</h3>
+<h3 id='url'>URL</h3>
 <p><code>https://zuto2vut94.execute-api.us-east-1.amazonaws.com/beta</code></p>
 <h3 id='method'>Method</h3>
 <p><code>POST</code></p>
@@ -409,17 +392,54 @@
 <td>Extra information</td>
 </tr>
 </tbody></table>
-
+<h3 id='this-endpoint-returns-a-json-structured-object'>This endpoint returns a JSON structured object. :</h3><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"ppt_value"</span><span class="p">:</span><span class="w"> </span><span class="mi">340000</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"user_data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"income_tax_sht"</span><span class="p">:</span><span class="w"> </span><span class="mi">6460</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ltv"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.7</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total_income_lng"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"2017"</span><span class="p">:</span><span class="w"> </span><span class="mi">5406</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"2018"</span><span class="p">:</span><span class="w"> </span><span class="mf">4989.5</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"2019"</span><span class="p">:</span><span class="w"> </span><span class="mi">4573</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"2020"</span><span class="p">:</span><span class="w"> </span><span class="mf">4156.5</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"2021"</span><span class="p">:</span><span class="w"> </span><span class="mi">3740</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"income_tax_lng"</span><span class="p">:</span><span class="w"> </span><span class="mi">6936</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"income_tax_rlf"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"2017"</span><span class="p">:</span><span class="w"> </span><span class="mi">3332</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"2018"</span><span class="p">:</span><span class="w"> </span><span class="mf">2915.5</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"2019"</span><span class="p">:</span><span class="w"> </span><span class="mi">2499</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"2020"</span><span class="p">:</span><span class="w"> </span><span class="mf">2082.5</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"2021"</span><span class="p">:</span><span class="w"> </span><span class="mi">1666</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"net_rev_sht"</span><span class="p">:</span><span class="w"> </span><span class="mi">24480</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"shtVslng"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"net_rev_lng"</span><span class="p">:</span><span class="w"> </span><span class="mi">17340</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total_income_sht"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"2017"</span><span class="p">:</span><span class="w"> </span><span class="mi">9690</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"2018"</span><span class="p">:</span><span class="w"> </span><span class="mi">9690</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"2019"</span><span class="p">:</span><span class="w"> </span><span class="mi">9690</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"2020"</span><span class="p">:</span><span class="w"> </span><span class="mi">9690</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"2021"</span><span class="p">:</span><span class="w"> </span><span class="mi">9690</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"interest_cost"</span><span class="p">:</span><span class="w"> </span><span class="mi">8330</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 <aside class="success">
 Note: parameters marked with * denotes those that are required.
 </aside>
 <h1 id='postcode'>Postcode</h1>
 <p>This endpoint retrieves all the available postcodes.</p>
-
-<blockquote>
-<p>The This endpoint returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+<h3 id='url-2'>URL</h3>
+<p><code>https://zuto2vut94.execute-api.us-east-1.amazonaws.com/beta</code></p>
+<h3 id='method-2'>Method</h3>
+<p><code>GET</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<p><code>None</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<p>`None&#39;</p>
+<h3 id='the-this-endpoint-returns-json-structured-like-this'>The This endpoint returns JSON structured like this:</h3><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"postcode"</span><span class="p">:</span><span class="w">
     </span><span class="p">[</span><span class="w"> </span><span class="s2">"SW15"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"CA23"</span><span class="p">,</span><span class="w">
@@ -428,25 +448,6 @@ Note: parameters marked with * denotes those that are required.
       </span><span class="err">...</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="err">```</span><span class="w">
-
-
-</span><span class="err">###</span><span class="w"> </span><span class="err">URL</span><span class="w">
-
-</span><span class="err">`https</span><span class="p">:</span><span class="err">//zuto</span><span class="mi">2</span><span class="err">vut</span><span class="mi">94</span><span class="err">.execute-api.us-east</span><span class="mi">-1</span><span class="err">.amazonaws.com/beta`</span><span class="w">
-
-</span><span class="err">###</span><span class="w"> </span><span class="err">Method</span><span class="w">
-
-</span><span class="err">`GET`</span><span class="w">
-
-
-</span><span class="err">###</span><span class="w"> </span><span class="err">Query</span><span class="w"> </span><span class="err">Parameters</span><span class="w">
-
-</span><span class="err">`None`</span><span class="w">
-
-
-</span><span class="err">###</span><span class="w"> </span><span class="err">URL</span><span class="w"> </span><span class="err">Parameters</span><span class="w">
-
-</span><span class="err">`None'</span><span class="w">
 </span></code></pre><h1 id='errors'>Errors</h1>
 <p>The Copofi API uses the following error codes:</p>
 
