@@ -22,8 +22,39 @@ Copofi uses API keys to allow access to the API endpoints. You will be given an 
 # FHL Calculato
 `Return calculated long-term and short-term let gross of a given property.`
 
+### URL
 
-> This endpoint returns a JSON structured object. :
+`https://zuto2vut94.execute-api.us-east-1.amazonaws.com/beta`
+
+### Method
+
+`POST`
+
+
+### Query Parameters
+
+Parameter | Type | Value | Description
+--------- | ---- | ----- | -----------
+postcode* | Text Categorical  | 2'200 potential values  | property postcode
+ppt_size* | Numerical Categorical  |  [1,2,3,4,5] | property size
+ppt_value* | Numerical  |   | property value
+loan_to_value* | Numerical  | (0, 0.75] | loan to value percentage
+interest_rate* | Numerical  | (0, 0.1] | mortgage interest rate
+ppt_lng_gross | Numerical  |   | long-term let monthly rent * 12 months
+ppt_lng_exps_perc | Numerical | (0, 1) | long-term let expense percentage
+ppt_sht_gross | Numerical  |   | short-term let monthly rent * 12 months
+ppt_sht_exps_perc | Numerical | (0, 1) | short-term let expense percentage
+income_tax_bra | Numerical Categorical  | [0.2, 0.4, 0.45] | individual income tax bracket
+user_name* | Text |   | user name
+user_email* | Text  | E-mail format | user email
+ppt_lender | Text Categorical | [Majors lenders in the UK] | property mortgage lender
+time_to_refin | Datetime |   | time to refinance
+ppt_mor_type | Text Categorical | [Interest only, Repayment] | property mortgage type
+ppt_tenor_period | Numerical Categorical  | [2, 3, 5] | property tenor of fixed period
+more | Text |    | Extra information
+
+
+###This endpoint returns a JSON structured object. :
 
 ```json
 {
@@ -61,58 +92,12 @@ Copofi uses API keys to allow access to the API endpoints. You will be given an 
 }
 ```
 
-### URL
-
-`https://zuto2vut94.execute-api.us-east-1.amazonaws.com/beta`
-
-### Method
-
-`POST`
-
-
-### Query Parameters
-
-Parameter | Type | Value | Description
---------- | ---- | ----- | -----------
-postcode* | Text Categorical  | 2'200 potential values  | property postcode
-ppt_size* | Numerical Categorical  |  [1,2,3,4,5] | property size
-ppt_value* | Numerical  |   | property value
-loan_to_value* | Numerical  | (0, 0.75] | loan to value percentage
-interest_rate* | Numerical  | (0, 0.1] | mortgage interest rate
-ppt_lng_gross | Numerical  |   | long-term let monthly rent * 12 months
-ppt_lng_exps_perc | Numerical | (0, 1) | long-term let expense percentage
-ppt_sht_gross | Numerical  |   | short-term let monthly rent * 12 months
-ppt_sht_exps_perc | Numerical | (0, 1) | short-term let expense percentage
-income_tax_bra | Numerical Categorical  | [0.2, 0.4, 0.45] | individual income tax bracket
-user_name* | Text |   | user name
-user_email* | Text  | E-mail format | user email
-ppt_lender | Text Categorical | [Majors lenders in the UK] | property mortgage lender
-time_to_refin | Datetime |   | time to refinance
-ppt_mor_type | Text Categorical | [Interest only, Repayment] | property mortgage type
-ppt_tenor_period | Numerical Categorical  | [2, 3, 5] | property tenor of fixed period
-more | Text |    | Extra information
-
-
 <aside class="success">
 Note: parameters marked with * denotes those that are required.
 </aside>
 
 # Postcode
 This endpoint retrieves all the available postcodes.
-
-> The This endpoint returns JSON structured like this:
-
-```json
-{
-  "postcode":
-    [ "SW15",
-      "CA23",
-      "EX24",
-      "LE17",
-      ...
-    ]
-}```
-
 
 ### URL
 
@@ -131,3 +116,16 @@ This endpoint retrieves all the available postcodes.
 ### URL Parameters
 
 `None'
+
+###The This endpoint returns JSON structured like this:
+
+```json
+{
+  "postcode":
+    [ "SW15",
+      "CA23",
+      "EX24",
+      "LE17",
+      ...
+    ]
+}```
