@@ -19,7 +19,7 @@ Welcome to Copofi API documentation! This page introduces Copofi API endpoints f
 
 Copofi uses API keys to allow access to the API endpoints. You will be given an API key upon request.
 
-# FHL Calculato
+# FHL Calculator
 `Return calculated long-term and short-term let gross of a given property.`
 
 ### URL
