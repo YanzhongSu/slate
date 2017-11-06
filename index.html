@@ -222,10 +222,7 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
           </li>
           <li>
-            <a href="#fhl-calculator" class="toc-h1 toc-link" data-title="FHL Calculator">FHL Calculator</a>
-          </li>
-          <li>
-            <a href="#calculation" class="toc-h1 toc-link" data-title="Calculation">Calculation</a>
+            <a href="#fhl-calculato" class="toc-h1 toc-link" data-title="FHL Calculato">FHL Calculato</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#url" class="toc-h2 toc-link" data-title="URL">URL</a>
@@ -257,7 +254,7 @@
 <p>Welcome to Copofi API documentation! This page introduces Copofi API endpoints for FHL calculator.</p>
 <h1 id='authentication'>Authentication</h1>
 <p>Copofi uses API keys to allow access to the API endpoints. You will be given an API key upon request.</p>
-<h1 id='fhl-calculator'>FHL Calculator</h1><h1 id='calculation'>Calculation</h1>
+<h1 id='fhl-calculato'>FHL Calculato</h1>
 <p><code>Return calculated long-term and short-term let gross of a given property.</code></p>
 
 <blockquote>
@@ -310,31 +307,31 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>postcode</td>
-<td>Text *Categorical</td>
+<td>postcode*</td>
+<td>Text Categorical</td>
 <td>2&#39;200 potential values</td>
 <td>property postcode</td>
 </tr>
 <tr>
-<td>ppt_size</td>
-<td>Numerical *Categorical</td>
+<td>ppt_size*</td>
+<td>Numerical Categorical</td>
 <td>[1,2,3,4,5]</td>
 <td>property size</td>
 </tr>
 <tr>
-<td>ppt_value</td>
+<td>ppt_value*</td>
 <td>Numerical</td>
 <td></td>
 <td>property value</td>
 </tr>
 <tr>
-<td>loan_to_value_perc</td>
+<td>loan_to_value*</td>
 <td>Numerical</td>
 <td>(0, 0.75]</td>
 <td>loan to value percentage</td>
 </tr>
 <tr>
-<td>interest_rate</td>
+<td>interest_rate*</td>
 <td>Numerical</td>
 <td>(0, 0.1]</td>
 <td>mortgage interest rate</td>
@@ -343,7 +340,7 @@
 <td>ppt_lng_gross</td>
 <td>Numerical</td>
 <td></td>
-<td>long-term let gross</td>
+<td>long-term let monthly rent * 12 months</td>
 </tr>
 <tr>
 <td>ppt_lng_exps_perc</td>
@@ -355,7 +352,7 @@
 <td>ppt_sht_gross</td>
 <td>Numerical</td>
 <td></td>
-<td>short-term let gross</td>
+<td>short-term let monthly rent * 12 months</td>
 </tr>
 <tr>
 <td>ppt_sht_exps_perc</td>
@@ -365,25 +362,25 @@
 </tr>
 <tr>
 <td>income_tax_bra</td>
-<td>Numerical *Categorical</td>
+<td>Numerical Categorical</td>
 <td>[0.2, 0.4, 0.45]</td>
 <td>individual income tax bracket</td>
 </tr>
 <tr>
-<td>user_name</td>
+<td>user_name*</td>
 <td>Text</td>
 <td></td>
 <td>user name</td>
 </tr>
 <tr>
-<td>user_email</td>
+<td>user_email*</td>
 <td>Text</td>
 <td>E-mail format</td>
 <td>user email</td>
 </tr>
 <tr>
 <td>ppt_lender</td>
-<td>Text *Categorical</td>
+<td>Text Categorical</td>
 <td>[Majors lenders in the UK]</td>
 <td>property mortgage lender</td>
 </tr>
@@ -395,13 +392,13 @@
 </tr>
 <tr>
 <td>ppt_mor_type</td>
-<td>Text *Categorical</td>
+<td>Text Categorical</td>
 <td>[Interest only, Repayment]</td>
 <td>property mortgage type</td>
 </tr>
 <tr>
 <td>ppt_tenor_period</td>
-<td>Numerical *Categorical</td>
+<td>Numerical Categorical</td>
 <td>[2, 3, 5]</td>
 <td>property tenor of fixed period</td>
 </tr>
@@ -419,43 +416,6 @@ Note: parameters marked with * denotes those that are required.
 <h1 id='postcode'>Postcode</h1>
 <p>This endpoint retrieves all the available postcodes.</p>
 
-<blockquote>
-<p>This endpoint returns a JSON structured object. :</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"ppt_value"</span><span class="p">:</span><span class="w"> </span><span class="mi">340000</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"user_data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"income_tax_sht"</span><span class="p">:</span><span class="w"> </span><span class="mi">6460</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"ltv"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.7</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"total_income_lng"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"2017"</span><span class="p">:</span><span class="w"> </span><span class="mi">5406</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2018"</span><span class="p">:</span><span class="w"> </span><span class="mf">4989.5</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2019"</span><span class="p">:</span><span class="w"> </span><span class="mi">4573</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2020"</span><span class="p">:</span><span class="w"> </span><span class="mf">4156.5</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2021"</span><span class="p">:</span><span class="w"> </span><span class="mi">3740</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"income_tax_lng"</span><span class="p">:</span><span class="w"> </span><span class="mi">6936</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"income_tax_rlf"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"2017"</span><span class="p">:</span><span class="w"> </span><span class="mi">3332</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2018"</span><span class="p">:</span><span class="w"> </span><span class="mf">2915.5</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2019"</span><span class="p">:</span><span class="w"> </span><span class="mi">2499</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2020"</span><span class="p">:</span><span class="w"> </span><span class="mf">2082.5</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2021"</span><span class="p">:</span><span class="w"> </span><span class="mi">1666</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"net_rev_sht"</span><span class="p">:</span><span class="w"> </span><span class="mi">24480</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"shtVslng"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"net_rev_lng"</span><span class="p">:</span><span class="w"> </span><span class="mi">17340</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"total_income_sht"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"2017"</span><span class="p">:</span><span class="w"> </span><span class="mi">9690</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2018"</span><span class="p">:</span><span class="w"> </span><span class="mi">9690</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2019"</span><span class="p">:</span><span class="w"> </span><span class="mi">9690</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2020"</span><span class="p">:</span><span class="w"> </span><span class="mi">9690</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"2021"</span><span class="p">:</span><span class="w"> </span><span class="mi">9690</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"interest_cost"</span><span class="p">:</span><span class="w"> </span><span class="mi">8330</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
 <blockquote>
 <p>The This endpoint returns JSON structured like this:</p>
 </blockquote>
