@@ -54,7 +54,7 @@ ppt_tenor_period | Numerical Categorical  | [2, 3, 5] | property tenor of fixed 
 more | Text |    | Extra information
 
 
-###This endpoint returns a JSON structured object. :
+> This endpoint returns a JSON structured object. :
 
 ```json
 {
@@ -117,7 +117,7 @@ This endpoint retrieves all the available postcodes.
 
 `None'
 
-###The This endpoint returns JSON structured like this:
+> The This endpoint returns JSON structured like this:
 
 ```json
 {
