@@ -38,7 +38,7 @@ Parameter | Type | Value | Description
 postcode* | Text Categorical  | 2'200 potential values  | property postcode
 ppt_size* | Numerical Categorical  |  [1,2,3,4,5] | property size
 ppt_value* | Numerical  |   | property value
-loan_to_value* | Numerical  | (0, ppt_value] | loan to value
+loan_to_value* | Numerical  | (0, ppt_value*0.75] | loan to value
 interest_rate* | Numerical  | (0, 0.1] | mortgage interest rate
 ppt_lng_gross | Numerical  |   | long-term let monthly rent * 12 months
 ppt_lng_exps_perc | Numerical | (0, 1) | long-term let expense percentage
