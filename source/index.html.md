@@ -38,13 +38,13 @@ Parameter | Type | Value | Description
 postcode* | Text Categorical  | 2'200 potential values  | property postcode
 ppt_size* | Numerical Categorical  |  [1,2,3,4,5] | property size
 ppt_value* | Numerical  |   | property value
-loan_to_value* | Numerical  | (0, 0.75] | loan to value percentage
+loan_to_value* | Numerical  | (0, ppt_value] | loan to value
 interest_rate* | Numerical  | (0, 0.1] | mortgage interest rate
 ppt_lng_gross | Numerical  |   | long-term let monthly rent * 12 months
 ppt_lng_exps_perc | Numerical | (0, 1) | long-term let expense percentage
 ppt_sht_gross | Numerical  |   | short-term let monthly rent * 12 months
 ppt_sht_exps_perc | Numerical | (0, 1) | short-term let expense percentage
-income_tax_bra | Numerical Categorical  | [0.2, 0.4, 0.45] | individual income tax bracket
+income_tax_bra* | Numerical Categorical  | [0.2, 0.4, 0.45] | individual income tax bracket
 user_name* | Text |   | user name
 user_email* | Text  | E-mail format | user email
 ppt_lender | Text Categorical | [Majors lenders in the UK] | property mortgage lender
