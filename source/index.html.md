@@ -123,7 +123,8 @@ ppt_size* | Numerical Categorical  |  [1,2,3,4,5] | property size
 {
   "ppt_sht_rent": 3039,
   "ppt_lng_rent": 2435
-}```
+}
+```
 
 # Postcode
 This endpoint retrieves all the available postcodes.
