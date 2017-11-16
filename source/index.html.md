@@ -129,3 +129,36 @@ This endpoint retrieves all the available postcodes.
       ...
     ]
 }```
+
+
+# Rent evaluation
+This endpoint is to get the estimated long-term monthly rent and short-term monthly rent based on the postcode and property size(number of bedrooms)
+
+### URL
+
+`https://zuto2vut94.execute-api.us-east-1.amazonaws.com/beta/rentevaluation`
+
+### Method
+
+`GET`
+
+
+### Query Parameters
+
+Parameter | Type | Value | Description
+--------- | ---- | ----- | -----------
+postcode* | Text Categorical  | 2'200 potential values  | property postcode
+ppt_size* | Numerical Categorical  |  [1,2,3,4,5] | property size
+
+
+### URL Parameters
+
+`None`
+
+> This endpoint returns a JSON structured object:
+
+```json
+{
+  "ppt_sht_rent": 3039,
+  "ppt_lng_rent": 2435
+}```
