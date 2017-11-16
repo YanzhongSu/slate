@@ -20,7 +20,7 @@ Welcome to Copofi API documentation! This page introduces Copofi API endpoints f
 Copofi uses API keys to allow access to the API endpoints. You will be given an API key upon request.
 
 # FHL Calculator
-`Return calculated long-term and short-term let gross of a given property.`
+Return calculated long-term and short-term let gross of a given property.
 
 ### URL
 
@@ -29,7 +29,6 @@ Copofi uses API keys to allow access to the API endpoints. You will be given an 
 ### Method
 
 `POST`
-
 
 ### Query Parameters
 
@@ -107,14 +106,12 @@ This endpoint is to get the estimated long-term monthly rent and short-term mont
 
 `GET`
 
-
 ### Query Parameters
 
 Parameter | Type | Value | Description
 --------- | ---- | ----- | -----------
 postcode* | Text Categorical  | 2'200 potential values  | property postcode
 ppt_size* | Numerical Categorical  |  [1,2,3,4,5] | property size
-
 
 ### URL Parameters
 
@@ -128,10 +125,6 @@ ppt_size* | Numerical Categorical  |  [1,2,3,4,5] | property size
   "ppt_lng_rent": 2435
 }```
 
-<aside class="success">
-Note: parameters marked with * denotes those that are required.
-</aside>
-
 # Postcode
 This endpoint retrieves all the available postcodes.
 
@@ -143,11 +136,9 @@ This endpoint retrieves all the available postcodes.
 
 `GET`
 
-
 ### Query Parameters
 
 `None`
-
 
 ### URL Parameters
 
