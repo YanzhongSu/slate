@@ -450,6 +450,39 @@ Note: parameters marked with * denotes those that are required.
       </span><span class="err">...</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="err">```</span><span class="w">
+
+
+</span><span class="err">#</span><span class="w"> </span><span class="err">Rent</span><span class="w"> </span><span class="err">evaluation</span><span class="w">
+</span><span class="err">This</span><span class="w"> </span><span class="err">endpoint</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">get</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">estimated</span><span class="w"> </span><span class="err">long-term</span><span class="w"> </span><span class="err">monthly</span><span class="w"> </span><span class="err">rent</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">short-term</span><span class="w"> </span><span class="err">monthly</span><span class="w"> </span><span class="err">rent</span><span class="w"> </span><span class="err">based</span><span class="w"> </span><span class="err">on</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">postcode</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">property</span><span class="w"> </span><span class="err">size(number</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">bedrooms)</span><span class="w">
+
+</span><span class="err">###</span><span class="w"> </span><span class="err">URL</span><span class="w">
+
+</span><span class="err">`https</span><span class="p">:</span><span class="err">//zuto</span><span class="mi">2</span><span class="err">vut</span><span class="mi">94</span><span class="err">.execute-api.us-east</span><span class="mi">-1</span><span class="err">.amazonaws.com/beta/rentevaluation`</span><span class="w">
+
+</span><span class="err">###</span><span class="w"> </span><span class="err">Method</span><span class="w">
+
+</span><span class="err">`GET`</span><span class="w">
+
+
+</span><span class="err">###</span><span class="w"> </span><span class="err">Query</span><span class="w"> </span><span class="err">Parameters</span><span class="w">
+
+</span><span class="err">Parameter</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">Type</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">Value</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">Description</span><span class="w">
+</span><span class="err">---------</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">----</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">-----</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">-----------</span><span class="w">
+</span><span class="err">postcode*</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">Text</span><span class="w"> </span><span class="err">Categorical</span><span class="w">  </span><span class="err">|</span><span class="w"> </span><span class="mi">2</span><span class="err">'</span><span class="mi">200</span><span class="w"> </span><span class="err">potential</span><span class="w"> </span><span class="err">values</span><span class="w">  </span><span class="err">|</span><span class="w"> </span><span class="err">property</span><span class="w"> </span><span class="err">postcode</span><span class="w">
+</span><span class="err">ppt_size*</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">Numerical</span><span class="w"> </span><span class="err">Categorical</span><span class="w">  </span><span class="err">|</span><span class="w">  </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">property</span><span class="w"> </span><span class="err">size</span><span class="w">
+
+
+</span><span class="err">###</span><span class="w"> </span><span class="err">URL</span><span class="w"> </span><span class="err">Parameters</span><span class="w">
+
+</span><span class="err">`None`</span><span class="w">
+
+</span><span class="err">&gt;</span><span class="w"> </span><span class="err">This</span><span class="w"> </span><span class="err">endpoint</span><span class="w"> </span><span class="err">returns</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">JSON</span><span class="w"> </span><span class="err">structured</span><span class="w"> </span><span class="err">object</span><span class="p">:</span><span class="w">
+
+</span><span class="err">```json</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"ppt_sht_rent"</span><span class="p">:</span><span class="w"> </span><span class="mi">3039</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ppt_lng_rent"</span><span class="p">:</span><span class="w"> </span><span class="mi">2435</span><span class="w">
+</span><span class="p">}</span><span class="err">```</span><span class="w">
 </span></code></pre><h1 id='errors'>Errors</h1>
 <p>The Copofi API uses the following error codes:</p>
 
