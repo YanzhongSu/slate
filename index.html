@@ -236,7 +236,7 @@
               </ul>
           </li>
           <li>
-            <a href="#postcode" class="toc-h1 toc-link" data-title="Postcode">Postcode</a>
+            <a href="#rent-evaluation" class="toc-h1 toc-link" data-title="Rent evaluation">Rent evaluation</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#url-2" class="toc-h2 toc-link" data-title="URL">URL</a>
@@ -427,14 +427,34 @@
 <aside class="success">
 Note: parameters marked with * denotes those that are required.
 </aside>
-<h1 id='postcode'>Postcode</h1>
-<p>This endpoint retrieves all the available postcodes.</p>
+<h1 id='rent-evaluation'>Rent evaluation</h1>
+<p>This endpoint is to get the estimated long-term monthly rent and short-term monthly rent based on the postcode and property size(number of bedrooms)</p>
 <h3 id='url-2'>URL</h3>
-<p><code>https://zuto2vut94.execute-api.us-east-1.amazonaws.com/beta</code></p>
+<p><code>https://zuto2vut94.execute-api.us-east-1.amazonaws.com/beta/rentevaluation</code></p>
 <h3 id='method-2'>Method</h3>
 <p><code>GET</code></p>
 <h3 id='query-parameters-2'>Query Parameters</h3>
-<p><code>None</code></p>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>postcode*</td>
+<td>Text Categorical</td>
+<td>2&#39;200 potential values</td>
+<td>property postcode</td>
+</tr>
+<tr>
+<td>ppt_size*</td>
+<td>Numerical Categorical</td>
+<td>[1,2,3,4,5]</td>
+<td>property size</td>
+</tr>
+</tbody></table>
 <h3 id='url-parameters'>URL Parameters</h3>
 <p><code>None</code></p>
 
@@ -442,22 +462,20 @@ Note: parameters marked with * denotes those that are required.
 <p>This endpoint returns a JSON structured object:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"postcode"</span><span class="p">:</span><span class="w">
-    </span><span class="p">[</span><span class="w"> </span><span class="s2">"SW15"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"CA23"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"EX24"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"LE17"</span><span class="p">,</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-    </span><span class="p">]</span><span class="w">
+  </span><span class="s2">"ppt_sht_rent"</span><span class="p">:</span><span class="w"> </span><span class="mi">3039</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ppt_lng_rent"</span><span class="p">:</span><span class="w"> </span><span class="mi">2435</span><span class="w">
 </span><span class="p">}</span><span class="err">```</span><span class="w">
 
+</span><span class="err">&lt;aside</span><span class="w"> </span><span class="err">class=</span><span class="s2">"success"</span><span class="err">&gt;</span><span class="w">
+</span><span class="err">Note</span><span class="p">:</span><span class="w"> </span><span class="err">parameters</span><span class="w"> </span><span class="err">marked</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">*</span><span class="w"> </span><span class="err">denotes</span><span class="w"> </span><span class="err">those</span><span class="w"> </span><span class="err">that</span><span class="w"> </span><span class="err">are</span><span class="w"> </span><span class="err">required.</span><span class="w">
+</span><span class="err">&lt;/aside&gt;</span><span class="w">
 
-</span><span class="err">#</span><span class="w"> </span><span class="err">Rent</span><span class="w"> </span><span class="err">evaluation</span><span class="w">
-</span><span class="err">This</span><span class="w"> </span><span class="err">endpoint</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">get</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">estimated</span><span class="w"> </span><span class="err">long-term</span><span class="w"> </span><span class="err">monthly</span><span class="w"> </span><span class="err">rent</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">short-term</span><span class="w"> </span><span class="err">monthly</span><span class="w"> </span><span class="err">rent</span><span class="w"> </span><span class="err">based</span><span class="w"> </span><span class="err">on</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">postcode</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">property</span><span class="w"> </span><span class="err">size(number</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">bedrooms)</span><span class="w">
+</span><span class="err">#</span><span class="w"> </span><span class="err">Postcode</span><span class="w">
+</span><span class="err">This</span><span class="w"> </span><span class="err">endpoint</span><span class="w"> </span><span class="err">retrieves</span><span class="w"> </span><span class="err">all</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">available</span><span class="w"> </span><span class="err">postcodes.</span><span class="w">
 
 </span><span class="err">###</span><span class="w"> </span><span class="err">URL</span><span class="w">
 
-</span><span class="err">`https</span><span class="p">:</span><span class="err">//zuto</span><span class="mi">2</span><span class="err">vut</span><span class="mi">94</span><span class="err">.execute-api.us-east</span><span class="mi">-1</span><span class="err">.amazonaws.com/beta/rentevaluation`</span><span class="w">
+</span><span class="err">`https</span><span class="p">:</span><span class="err">//zuto</span><span class="mi">2</span><span class="err">vut</span><span class="mi">94</span><span class="err">.execute-api.us-east</span><span class="mi">-1</span><span class="err">.amazonaws.com/beta`</span><span class="w">
 
 </span><span class="err">###</span><span class="w"> </span><span class="err">Method</span><span class="w">
 
@@ -466,10 +484,7 @@ Note: parameters marked with * denotes those that are required.
 
 </span><span class="err">###</span><span class="w"> </span><span class="err">Query</span><span class="w"> </span><span class="err">Parameters</span><span class="w">
 
-</span><span class="err">Parameter</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">Type</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">Value</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">Description</span><span class="w">
-</span><span class="err">---------</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">----</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">-----</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">-----------</span><span class="w">
-</span><span class="err">postcode*</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">Text</span><span class="w"> </span><span class="err">Categorical</span><span class="w">  </span><span class="err">|</span><span class="w"> </span><span class="mi">2</span><span class="err">'</span><span class="mi">200</span><span class="w"> </span><span class="err">potential</span><span class="w"> </span><span class="err">values</span><span class="w">  </span><span class="err">|</span><span class="w"> </span><span class="err">property</span><span class="w"> </span><span class="err">postcode</span><span class="w">
-</span><span class="err">ppt_size*</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">Numerical</span><span class="w"> </span><span class="err">Categorical</span><span class="w">  </span><span class="err">|</span><span class="w">  </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">property</span><span class="w"> </span><span class="err">size</span><span class="w">
+</span><span class="err">`None`</span><span class="w">
 
 
 </span><span class="err">###</span><span class="w"> </span><span class="err">URL</span><span class="w"> </span><span class="err">Parameters</span><span class="w">
@@ -480,8 +495,13 @@ Note: parameters marked with * denotes those that are required.
 
 </span><span class="err">```json</span><span class="w">
 </span><span class="p">{</span><span class="w">
-  </span><span class="s2">"ppt_sht_rent"</span><span class="p">:</span><span class="w"> </span><span class="mi">3039</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"ppt_lng_rent"</span><span class="p">:</span><span class="w"> </span><span class="mi">2435</span><span class="w">
+  </span><span class="s2">"postcode"</span><span class="p">:</span><span class="w">
+    </span><span class="p">[</span><span class="w"> </span><span class="s2">"SW15"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"CA23"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"EX24"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"LE17"</span><span class="p">,</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="err">```</span><span class="w">
 </span></code></pre><h1 id='errors'>Errors</h1>
 <p>The Copofi API uses the following error codes:</p>
