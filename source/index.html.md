@@ -117,7 +117,7 @@ ppt_size* | Numerical Categorical  |  [1,2,3,4,5] | property size
 
 `None`
 
-### This endpoint returns a JSON structured object:
+> This endpoint returns a JSON structured object:
 
 ```json
 {
